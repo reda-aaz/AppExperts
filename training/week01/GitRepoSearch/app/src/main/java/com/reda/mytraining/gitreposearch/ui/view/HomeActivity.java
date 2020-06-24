@@ -57,8 +57,9 @@ public class HomeActivity extends AppCompatActivity {
 
         repositoryObserver = this::updateRepositories;
 
-        gitViewModel.getRepos().observe(this, repositoryObserver);
+        gitViewModel.getResults("Facebook");
 
+        gitViewModel.getReposLiveData().observe(HomeActivity.this, repositoryObserver);
 
         gitViewModel.showProgressBar().observe(this, isSearching -> {
             if (isSearching) {
@@ -73,7 +74,7 @@ public class HomeActivity extends AppCompatActivity {
             String gitUserName = gitRepoEditText.getText().toString();
             if (!gitUserName.trim().isEmpty()) {
                 Log.i(TAG, "gitUserName: " + gitUserName);
-                gitViewModel.getResults(gitUserName.trim()).observe(HomeActivity.this, repositoryObserver);
+                gitViewModel.getResults(gitUserName.trim());
             }
         });
     }
