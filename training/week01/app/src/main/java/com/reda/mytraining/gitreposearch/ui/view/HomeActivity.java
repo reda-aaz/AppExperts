@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -28,6 +29,7 @@ public class HomeActivity extends AppCompatActivity {
     private GitViewModel gitViewModel;
     private Observer<List<Repository>> repositoryObserver;
     private GitRepositoryAdapter gitAdapter = new GitRepositoryAdapter(new ArrayList<>());
+    private static final String TAG = "HomeActivity";
 
     @BindView(R.id.repository_recyclerview)
     RecyclerView repositoryRecyclerView;
@@ -53,28 +55,10 @@ public class HomeActivity extends AppCompatActivity {
 
         gitViewModel.getRepos().observe(this, repositoryObserver);
 
-
-        gitRepoEditText.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-//                DO nothing
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-                //gitViewModel.getResults(s.toString().trim()).observe(HomeActivity.this, repositoryObserver);
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-//              Do nothing
-            }
-        });
-
         gitSearchButton.setOnClickListener(v -> {
                 String gitUserName = gitRepoEditText.getText().toString();
                 if( !gitUserName.isEmpty()) {
+                    Log.i(TAG, "gitUserName: " + gitUserName);
                     gitViewModel.getResults(gitUserName.trim()).observe(HomeActivity.this, repositoryObserver);
                 }
         });

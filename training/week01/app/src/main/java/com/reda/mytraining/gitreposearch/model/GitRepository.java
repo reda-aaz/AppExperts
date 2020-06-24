@@ -28,7 +28,7 @@ public class GitRepository {
 
     public LiveData<List<Repository>> getRepositoryLiveData() {
         viewModelComposite.add(
-                retrofitInstance.getUserGitRepository("reda-aaz")
+                retrofitInstance.getUserGitRepository("FaceBook")
                         .observeOn(AndroidSchedulers.mainThread())
                         .subscribeOn(Schedulers.io())
                         .subscribe(repoList -> {
