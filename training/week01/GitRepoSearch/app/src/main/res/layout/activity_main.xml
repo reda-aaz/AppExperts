@@ -32,7 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="8dp"
-        android:text="Search"
+        android:text="@string/search"
         app:layout_constraintBottom_toBottomOf="@+id/git_repo_edittext"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/git_repo_edittext" />
