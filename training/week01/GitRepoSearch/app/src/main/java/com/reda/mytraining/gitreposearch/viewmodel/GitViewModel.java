@@ -13,7 +13,7 @@ public class GitViewModel extends ViewModel {
     private GitRepository gitRepository = new GitRepository();
 
     private MutableLiveData<Boolean> isSearching = new MutableLiveData<>();
-    public LiveData<Boolean> getIsSearching() {
+    public LiveData<Boolean> showProgressBar() {
         return isSearching;
     }
 

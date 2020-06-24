@@ -7,8 +7,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -62,7 +60,7 @@ public class HomeActivity extends AppCompatActivity {
         gitViewModel.getRepos().observe(this, repositoryObserver);
 
 
-        gitViewModel.getIsSearching().observe(this, isSearching -> {
+        gitViewModel.showProgressBar().observe(this, isSearching -> {
             if (isSearching) {
                 progressBar.setVisibility(View.VISIBLE);
             }
@@ -73,7 +71,7 @@ public class HomeActivity extends AppCompatActivity {
 
         gitSearchButton.setOnClickListener(v -> {
             String gitUserName = gitRepoEditText.getText().toString();
-            if (!gitUserName.isEmpty()) {
+            if (!gitUserName.trim().isEmpty()) {
                 Log.i(TAG, "gitUserName: " + gitUserName);
                 gitViewModel.getResults(gitUserName.trim()).observe(HomeActivity.this, repositoryObserver);
             }
