@@ -21,7 +21,7 @@ public class GitViewModel extends ViewModel {
 
     private MutableLiveData<List<Repository>> repositoryLiveData = new MutableLiveData<>();
     private MutableLiveData<Boolean> isSearching = new MutableLiveData<>();
-    
+
     public LiveData<Boolean> showProgressBar() {
         return isSearching;
     }
@@ -42,6 +42,7 @@ public class GitViewModel extends ViewModel {
                             repositoryLiveData.setValue(repoList);
 
                         }, throwable -> {
+                            isSearching.setValue(false);
                             Log.d("TAG_ERROR", "" + throwable.getLocalizedMessage());
                         })
         );

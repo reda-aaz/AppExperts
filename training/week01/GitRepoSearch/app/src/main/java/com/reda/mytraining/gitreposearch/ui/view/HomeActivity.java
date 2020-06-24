@@ -24,6 +24,8 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+import static com.reda.mytraining.gitreposearch.util.Constants.FIRST_USER_GIT_NAME;
+
 public class HomeActivity extends AppCompatActivity {
 
     private GitViewModel gitViewModel;
@@ -57,7 +59,7 @@ public class HomeActivity extends AppCompatActivity {
 
         repositoryObserver = this::updateRepositories;
 
-        gitViewModel.getResults("Facebook");
+        gitViewModel.getResults(FIRST_USER_GIT_NAME);
 
         gitViewModel.getReposLiveData().observe(HomeActivity.this, repositoryObserver);
 
