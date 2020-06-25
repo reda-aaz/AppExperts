@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">MyLocation</string>
-    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_maps">My Location</string>
     <string name="enter_the_address">Enter the address</string>
     <string name="search">Search</string>
     <string name="noResultsFound">No results found</string>
+    <string name="error_occurred">An error occurred during the request</string>
 </resources>
