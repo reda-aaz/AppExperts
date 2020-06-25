@@ -80,7 +80,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             }
             else {
                 Log.i(TAG, "no results found");
-                Toast.makeText(MapsActivity.this, getString(R.string.noResultsFound),Toast.LENGTH_LONG);
+                Toast.makeText(MapsActivity.this, getString(R.string.noResultsFound),Toast.LENGTH_LONG).show();
             }
             locationViewModel.doneSearching();
         });
