@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">MyPlaceCompass</string>
+    <string name="title_activity_maps">MyPlaceCompass</string>
+    <string name="cafe_text">Cafe</string>
+    <string name="police_text">Police</string>
+    <string name="school_item">School</string>
+    <string name="hospital_item">Hospital</string>
+    <string name="gym_item">Gym</string>
+    <string name="zoo_item">Zoo</string>
+    <string name="laundry_item">Laundry</string>
+    <string name="park_item">Park</string>
+    <string name="no_photos">No photos</string>
+    <string name="directions_text">Directions</string>
+    <string name="permission_denied_explanation">
+        You need to grant location permission in order to play this game.
+    </string>
+    <string name="settings">Settings</string>
+    <string name="visit_paris">Visit Paris</string>
+    <string name="eiffel_tower">Let\'s Begin our visit with \"La Tour Eiffel\"</string>
+    <string name="sacred_heart">La basilique du Sacré coeur</string>
+    <string name="notre_dame">آNotre Dame</string>
+    <string name="city_of_science">La cité des Sciences</string>
+    <string name="arc_de_triomphe">L\'Arc de Triomphe</string>
+
+    <string name="geofences_not_removed">Geofences not removed.</string>
+    <string name="geofences_not_added">Problem in adding geofences.</string>
+    <string name="geofences_added">Clue Geofence added.</string>
+    <string name="geofences_removed">Geofences removed.</string>
+    <string name="geofence_entered">Geofence entered.</string>
+    <string name="geofence_over">You have finished our visit! Congratulations!</string>
+
+    <!-- Error strings -->
+    <string name="geofence_not_available">Geofence service is not available now</string>
+    <string name="geofence_too_many_geofences">Your app has registered too many geofences</string>
+    <string name="geofence_too_many_pending_intents">
+        You have provided too many PendingIntents to the addGeofences() call
+    </string>
+    <string name="unknown_geofence_error">Unknown error: the Geofence service is not available now</string>
+    <string name="location_required_error">Location services must be enabled for this game.</string>
+    <!-- Notification Strings-->
+    <string name="channel_name">VisitStatus</string>
+    <string name="content_text">You are near to %1$s .</string>
+    <string name="notification_channel_description">Visit Paris notification</string>
+    <string name="not_started"/>
+</resources>

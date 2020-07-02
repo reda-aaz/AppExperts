@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ProfileCompoundView">
+        <attr name="pseudo" format="string"/>
+        <attr name="email" format="string"/>
+        <attr name="personPic" format="integer"/>
+    </declare-styleable>
+</resources>
