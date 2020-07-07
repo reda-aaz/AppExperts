@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "290800484692",
+    "firebase_url": "https://red-app-73ab5.firebaseio.com",
+    "project_id": "red-app-73ab5",
+    "storage_bucket": "red-app-73ab5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:290800484692:android:2d14584a9ccf87a40d08c1",
+        "android_client_info": {
+          "package_name": "com.redapp.fatbook"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "290800484692-v5852ln4mejtopqrdfejvv438pm23g3i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4M17ae7oUmqs3T_DYHAo5GNkoHON0_n4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "290800484692-v5852ln4mejtopqrdfejvv438pm23g3i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
